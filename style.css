@@ -42,41 +42,31 @@ header {
   width: auto;
 }
 
-/* .header__repair-logo::after {
-  content: "";
-  height: 32px;
-  border-left: 2px solid #eaeaea;
-  /* padding-right: 16px; */
-/* position: absolute;
-top: -70%;
-left: 0;
-} */
 
 .last-icons .header__repair-logo {
-  /* border: 1px solid black; */
+
   padding-left: 16px;
   padding-right: 16px;
   display: flex;
-  /* position: relative; */
+
   text-decoration: none;
   align-items: center;
 }
+
 .last-icons .header__checkstatus-logo {
   display: flex;
   align-items: center;
   text-decoration: none;
 }
+
 .last-icons span {
-  font-family: TT Lakes Medium;
+  font-family: 'TT Lakes Medium';
   font-size: 16px;
   line-height: 24px;
-  /* identical to box height, or 150% */
-  /* display: inline; */
   letter-spacing: -0.2px;
 
   color: #1b1c21;
-  margin-right: 8px;
-  /* vertical-align: middle; */
+
   display: none;
 }
 
@@ -98,9 +88,10 @@ main {
 }
 
 .title {
-  /* border: 1px solid black; */
+
   position: relative;
 }
+
 .title::before {
   content: "";
   height: 100%;
@@ -111,11 +102,12 @@ main {
 }
 
 .title h1 {
-  font-family: TT Lakes Bold;
+  font-family: 'TT Lakes Bold';
   font-size: 28px;
   margin: 0;
   padding: 0;
 }
+
 .main__container .last-icons {
   display: none;
 }
@@ -129,27 +121,32 @@ main {
   padding-left: 17px;
 
   position: relative;
-  /* z-index: 10 */
+
 }
 
 .scroller__nav li {
   margin-right: 16px;
   list-style: none;
   width: 246px;
-  height: 25px;
-  font-family: TT Lakes Medium;
+  height: 40px;
+  font-family: 'TT Lakes Medium';
   font-size: 16px;
-  /* border: 1px solid black; */
+
   padding-top: 0;
   cursor: pointer;
   text-align: center;
+  padding-top: 7px;
+
 }
+
 .scroller__nav li:hover {
   background-color: white;
   border: 2px solid #d9fff5;
   width: 246px;
-  height: 25px;
+  height: 40px;
   border-radius: 6px;
+  margin-bottom: 5px;
+
 }
 
 .scroller__nav ul {
@@ -157,7 +154,7 @@ main {
   /* border: 1px solid black; */
   padding: 0;
   /* border: 1px solid black; */
-  padding-top: 0;
+
   /* justify-content: space-between; */
   /* align-items: top; */
   /* z-index: 10000; */
@@ -166,8 +163,8 @@ main {
 
 .about .about__text {
   width: 288px;
-  max-height: 90px;
-  font-family: TT Lakes Regular;
+  max-height: 100px;
+  font-family: 'TT Lakes Regular';
   font-size: 14px;
   line-height: 18px;
   /* or 129% */
@@ -179,14 +176,20 @@ main {
 
 .about {
   margin-top: 16px;
+  /* border: 2px solid black; */
+  max-height: 100%;
 }
 
 .about .about__text {
+  line-height: 20px;
+  font-size: 14px;
+  color: #1B1C21;
+  letter-spacing: 0.2px;
 }
 
 .about .about__read-more__icon {
   text-decoration: none;
-  font-family: TT Lakes Medium;
+  font-family: 'TT Lakes Medium';
   font-size: 16px;
   line-height: 24px;
   /* identical to box height, or 150% */
@@ -200,7 +203,7 @@ main {
 
 .about__image__section {
   margin-top: 16px;
-  max-width: 320px;
+  max-width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -245,17 +248,21 @@ main {
     justify-content: space-between;
     align-items: center;
     /* border: 1px solid black */
-    max-height: 250px;
+
+    height: 100%;
   }
 
   .about .about__section .about__text {
-    width: 312px;
-    max-height: 100%;
+    min-width: 312px;
+    max-height: 160px;
+    overflow-y: hidden;
+
   }
 
   .about .about__image__section {
     /* border: 1px solid black; */
     max-width: 100%;
+    flex: 0 1 auto;
   }
 
   .about .about__image__section img {
@@ -268,23 +275,27 @@ main {
 
 @media screen and (min-width: 1120px) {
   header {
-    max-width: 1120px;
+    min-width: 1120px;
     background-color: #f8f8f8;
     float: right;
     clear: both;
     display: none;
   }
+
   main .main__container {
-    max-width: 1400px;
+    max-width: 100%;
     margin: auto;
   }
+
   main .main__container .title {
     display: flex;
     justify-content: space-between;
   }
+
   main .main__container .last-icons {
     display: flex;
   }
+
   main .main__container .last-icons span {
     font-family: TT Lakes Medium;
     font-size: 16px;
@@ -312,4 +323,15 @@ main {
     justify-content: flex-end;
     border: none;
   } */
+  article .about {
+    max-width: 100%;
+    max-height: 100%;
+
+  }
+
+  .about .about__section .about__text {
+    min-width: 490px
+  }
+
+
 }
